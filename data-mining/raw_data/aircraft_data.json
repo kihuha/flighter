@@ -1,0 +1,330 @@
+[
+  {
+    "aircraft_name": "Airbus A318",
+    "manufacturer": "Airbus",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 107,
+    "capacity_max": 132,
+    "range_nm": 3100,
+    "co2_g_per_pax_mile": 110
+  },
+  {
+    "aircraft_name": "Airbus A319",
+    "manufacturer": "Airbus",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 124,
+    "capacity_max": 156,
+    "range_nm": 3300,
+    "co2_g_per_pax_mile": 105
+  },
+  {
+    "aircraft_name": "Airbus A320",
+    "manufacturer": "Airbus",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 150,
+    "capacity_max": 186,
+    "range_nm": 3300,
+    "co2_g_per_pax_mile": 100
+  },
+  {
+    "aircraft_name": "Airbus A321",
+    "manufacturer": "Airbus",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 185,
+    "capacity_max": 230,
+    "range_nm": 4000,
+    "co2_g_per_pax_mile": 98
+  },
+  {
+    "aircraft_name": "Airbus A300-600",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 228,
+    "capacity_max": 254,
+    "range_nm": 4500,
+    "co2_g_per_pax_mile": 125
+  },
+  {
+    "aircraft_name": "Airbus A310",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 220,
+    "capacity_max": 265,
+    "range_nm": 5000,
+    "co2_g_per_pax_mile": 120
+  },
+  {
+    "aircraft_name": "Airbus A330-200",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 246,
+    "capacity_max": 300,
+    "range_nm": 7200,
+    "co2_g_per_pax_mile": 95
+  },
+  {
+    "aircraft_name": "Airbus A330-300",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 250,
+    "capacity_max": 300,
+    "range_nm": 6350,
+    "co2_g_per_pax_mile": 97
+  },
+  {
+    "aircraft_name": "Airbus A340-200",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 210,
+    "capacity_max": 261,
+    "range_nm": 7200,
+    "co2_g_per_pax_mile": 125
+  },
+  {
+    "aircraft_name": "Airbus A340-300",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 250,
+    "capacity_max": 290,
+    "range_nm": 7400,
+    "co2_g_per_pax_mile": 123
+  },
+  {
+    "aircraft_name": "Airbus A340-500",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 250,
+    "capacity_max": 310,
+    "range_nm": 8500,
+    "co2_g_per_pax_mile": 130
+  },
+  {
+    "aircraft_name": "Airbus A340-600",
+    "manufacturer": "Airbus",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 300,
+    "capacity_max": 370,
+    "range_nm": 7900,
+    "co2_g_per_pax_mile": 128
+  },
+  {
+    "aircraft_name": "Airbus A380-800",
+    "manufacturer": "Airbus",
+    "category": "very_large_widebody",
+    "capacity_min": 555,
+    "capacity_max": 853,
+    "range_nm": 8000,
+    "co2_g_per_pax_mile": 90
+  },
+  {
+    "aircraft_name": "Boeing 717",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 100,
+    "capacity_max": 134,
+    "range_nm": 1250,
+    "co2_g_per_pax_mile": 120
+  },
+  {
+    "aircraft_name": "Boeing 737-200",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 100,
+    "capacity_max": 130,
+    "range_nm": 2000,
+    "co2_g_per_pax_mile": 130
+  },
+  {
+    "aircraft_name": "Boeing 737-300",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 126,
+    "capacity_max": 149,
+    "range_nm": 2400,
+    "co2_g_per_pax_mile": 120
+  },
+  {
+    "aircraft_name": "Boeing 737-400",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 147,
+    "capacity_max": 188,
+    "range_nm": 2300,
+    "co2_g_per_pax_mile": 118
+  },
+  {
+    "aircraft_name": "Boeing 737-500",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 110,
+    "capacity_max": 132,
+    "range_nm": 2950,
+    "co2_g_per_pax_mile": 115
+  },
+  {
+    "aircraft_name": "Boeing 737-600",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 108,
+    "capacity_max": 130,
+    "range_nm": 3200,
+    "co2_g_per_pax_mile": 112
+  },
+  {
+    "aircraft_name": "Boeing 737-700",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 126,
+    "capacity_max": 149,
+    "range_nm": 3200,
+    "co2_g_per_pax_mile": 108
+  },
+  {
+    "aircraft_name": "Boeing 737-800",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 162,
+    "capacity_max": 189,
+    "range_nm": 2900,
+    "co2_g_per_pax_mile": 102
+  },
+  {
+    "aircraft_name": "Boeing 737-900",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 178,
+    "capacity_max": 220,
+    "range_nm": 2950,
+    "co2_g_per_pax_mile": 100
+  },
+  {
+    "aircraft_name": "Boeing 747-400",
+    "manufacturer": "Boeing",
+    "category": "large_widebody",
+    "capacity_min": 416,
+    "capacity_max": 524,
+    "range_nm": 7800,
+    "co2_g_per_pax_mile": 120
+  },
+  {
+    "aircraft_name": "Boeing 757-200",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 180,
+    "capacity_max": 239,
+    "range_nm": 3900,
+    "co2_g_per_pax_mile": 105
+  },
+  {
+    "aircraft_name": "Boeing 757-300",
+    "manufacturer": "Boeing",
+    "category": "narrowbody",
+    "fuel_litre_per_100km_per_passenger": 2.5,
+    "capacity_min": 220,
+    "capacity_max": 243,
+    "range_nm": 3400,
+    "co2_g_per_pax_mile": 103
+  },
+  {
+    "aircraft_name": "Boeing 767-200",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 174,
+    "capacity_max": 210,
+    "range_nm": 3500,
+    "co2_g_per_pax_mile": 115
+  },
+  {
+    "aircraft_name": "Boeing 767-300",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 218,
+    "capacity_max": 269,
+    "range_nm": 6000,
+    "co2_g_per_pax_mile": 110
+  },
+  {
+    "aircraft_name": "Boeing 767-400",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 245,
+    "capacity_max": 296,
+    "range_nm": 5600,
+    "co2_g_per_pax_mile": 108
+  },
+  {
+    "aircraft_name": "Boeing 777-200",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 305,
+    "capacity_max": 344,
+    "range_nm": 7200,
+    "co2_g_per_pax_mile": 100
+  },
+  {
+    "aircraft_name": "Boeing 777-200LR",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 301,
+    "capacity_max": 317,
+    "range_nm": 8550,
+    "co2_g_per_pax_mile": 102
+  },
+  {
+    "aircraft_name": "Boeing 777-300",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 328,
+    "capacity_max": 368,
+    "range_nm": 6000,
+    "co2_g_per_pax_mile": 98
+  },
+  {
+    "aircraft_name": "Boeing 777-300ER",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 350,
+    "capacity_max": 396,
+    "range_nm": 7400,
+    "co2_g_per_pax_mile": 95
+  },
+  {
+    "aircraft_name": "Boeing 787-8",
+    "manufacturer": "Boeing",
+    "category": "widebody",
+    "fuel_litre_per_100km_per_passenger": 3.5,
+    "capacity_min": 242,
+    "capacity_max": 290,
+    "range_nm": 7350,
+    "co2_g_per_pax_mile": 85
+  }
+]

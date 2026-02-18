@@ -1,0 +1,4 @@
+.venv
+airline_images/*
+clean_data/*
+sql_statements/*

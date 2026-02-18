@@ -1,0 +1,21 @@
+[project]
+name = "flighter-data-pipeline"
+version = "0.1.0"
+description = "Deterministic data pipeline and SQL seed generation for Flighter"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2.3,<3.0.0",
+]
+
+[project.scripts]
+flighter-pipeline = "pipeline.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["pipeline"]

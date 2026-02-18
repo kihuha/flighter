@@ -1,0 +1,127 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model aircraft_types {
+  plane_iso                          String   @id
+  plane_name                         String?
+  aircraft_name                      String?
+  manufacturer                       String?
+  category                           String?
+  fuel_litre_per_100km_per_passenger Float?
+  capacity_min                       Int?
+  capacity_max                       Int?
+  range_nm                           Int?
+  co2_g_per_pax_mile                 Float?
+  routes                             routes[]
+
+  @@index([manufacturer, category], map: "aircraft_types_mfr_cat_idx")
+}
+
+model airlines {
+  airline_id String   @id
+  name       String?
+  iata_code  String?
+  icao_code  String?
+  call_sign  String?
+  country    String?
+  is_active  Boolean  @default(true)
+  logo_path  String?
+  routes     routes[]
+}
+
+model airports {
+  airport_id                                     BigInt   @id
+  name                                           String?
+  city                                           String?
+  country                                        String?
+  iata_code                                      String?
+  icao_code                                      String?
+  latitude                                       Float?
+  longitude                                      Float?
+  timezone                                       String?
+  database_timezone                              String?
+  type                                           String?
+  routes_routes_destination_airport_idToairports routes[] @relation("routes_destination_airport_idToairports")
+  routes_routes_source_airport_idToairports      routes[] @relation("routes_source_airport_idToairports")
+
+  @@index([country, city])
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model flight_schedules {
+  flight_schedule_id  String   @id @db.Uuid
+  route_id            String   @db.Uuid
+  airline_id          String
+  flight_number       String   @db.VarChar(8)
+  depart_time_local   DateTime @db.Time(6)
+  arrive_time_local   DateTime @db.Time(6)
+  operating_days_mask Int      @db.SmallInt
+  weekly_frequency    Int      @db.SmallInt
+  aircraft_iso        String   @db.Char(3)
+  effective_from      DateTime @db.Date
+  effective_to        DateTime @db.Date
+}
+
+model route_metrics {
+  route_id         String   @id @db.Uuid
+  distance_km      Float?
+  distance_miles   Float?
+  is_international Boolean?
+  co2_total_kg     Float?
+  routes           routes   @relation(fields: [route_id], references: [route_id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model routes {
+  route_id                                         String          @id @db.Uuid
+  airline_id                                       String
+  source_airport_id                                BigInt
+  destination_airport_id                           BigInt
+  stops                                            Int             @default(0)
+  plane_iso                                        String?
+  route_metrics                                    route_metrics?
+  airlines                                         airlines        @relation(fields: [airline_id], references: [airline_id], onDelete: NoAction, onUpdate: NoAction, map: "routes_airline_fk")
+  airports_routes_destination_airport_idToairports airports        @relation("routes_destination_airport_idToairports", fields: [destination_airport_id], references: [airport_id], onDelete: NoAction, onUpdate: NoAction, map: "routes_dest_fk")
+  aircraft_types                                   aircraft_types? @relation(fields: [plane_iso], references: [plane_iso], onDelete: NoAction, onUpdate: NoAction, map: "routes_plane_fk")
+  airports_routes_source_airport_idToairports      airports        @relation("routes_source_airport_idToairports", fields: [source_airport_id], references: [airport_id], onDelete: NoAction, onUpdate: NoAction, map: "routes_source_fk")
+
+  @@unique([airline_id, source_airport_id, destination_airport_id, stops, plane_iso], map: "routes_natural_uq")
+  @@index([airline_id], map: "routes_airline_idx")
+  @@index([destination_airport_id], map: "routes_dst_idx")
+  @@index([source_airport_id], map: "routes_src_idx")
+}
+
+model bookings {
+  booking_id            String    @id @default(uuid()) @db.Uuid
+  booking_reference     String    @unique @db.VarChar(20)
+  passenger_full_name   String    @db.VarChar(255)
+  passenger_email       String    @db.VarChar(255)
+  passenger_phone       String    @db.VarChar(50)
+  departure_schedule_id String    @db.Uuid
+  return_schedule_id    String?   @db.Uuid
+  adults                Int       @default(1)
+  children              Int       @default(0)
+  flight_class          String    @db.VarChar(50)
+  base_price            Decimal   @db.Decimal(10, 2)
+  extras_price          Decimal   @default(0) @db.Decimal(10, 2)
+  taxes_and_fees        Decimal   @db.Decimal(10, 2)
+  total_price           Decimal   @db.Decimal(10, 2)
+  extras_json           Json?
+  status                String    @default("pending") @db.VarChar(20)
+  hold_until            DateTime?
+  payment_method        String?   @db.VarChar(50)
+  payment_status        String    @default("pending") @db.VarChar(20)
+  card_last_four        String?   @db.VarChar(4)
+  created_at            DateTime  @default(now())
+  updated_at            DateTime  @updatedAt
+
+  @@index([booking_reference])
+  @@index([passenger_email])
+  @@index([status])
+  @@index([created_at])
+}
